@@ -1,0 +1,29 @@
+@startuml
+
+entity Topic {
+  * id
+  --
+  * short_desc
+  long_desc
+}
+
+entity Folder {
+  * id
+  --
+  * name
+  topics
+}
+
+entity Document {
+  * id
+  --
+  * title
+  * content
+  * folder
+  topics
+}
+
+Folder ||..o{ Document
+Topic }o..o{ Document
+Folder }o..o{ Topic
+@enduml
