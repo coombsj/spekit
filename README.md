@@ -11,8 +11,10 @@ Create an API that stores “digital documents” in “folders”. Folders or D
 * Deploy to a free cloud hosting site such as heroku and send us a link to access the finished work
 * Ensure to populate the service with enough representative sample data to demonstrate basic request functionality
 
-Example test case: As a front-end developer, I want to access in a single request all the documents in the folder “Customer Feedback” associated with the topic “SpekiLove!” 
+Example test case: As a front-end developer, I want to access in a single request all the documents in the folder “Customer Feedback” associated with the topic “SpekiLove!”
 
 Gherkin feature files describing scenarios can be found in: [features](features)
 
 Data Model can be found in: [docs](docs)
+
+Demo API has been deployed to Heroku: <https://fierce-badlands-77174.herokuapp.com/>

@@ -1,4 +1,4 @@
-@startuml
+@startuml Data Model
 
 entity Topic {
   * id
