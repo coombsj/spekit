@@ -21,7 +21,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'rest_framework',
-    'rest_framework_swagger',
     'documents.apps.DocumentsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
