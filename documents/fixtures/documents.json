@@ -18,7 +18,7 @@
   {
     "model": "documents.folder",
     "pk": 1,
-    "fields": { "name": "Folder 1", "topics": [2] }
+    "fields": { "name": "Customer Feedback", "topics": [2] }
   },
   {
     "model": "documents.folder",
