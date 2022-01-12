@@ -1,0 +1,12 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "spekit",
+      "database": "${workspaceFolder:spekit}/db.sqlite3",
+      "group": "spekit"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "model": "documents.topic",
+    "pk": 1,
+    "fields": {
+      "short_desc": "Topic 1",
+      "long_desc": "This is the first topic"
+    }
+  },
+  {
+    "model": "documents.topic",
+    "pk": 2,
+    "fields": {
+      "short_desc": "Topic 2",
+      "long_desc": "This is the second topic"
+    }
+  },
+  {
+    "model": "documents.folder",
+    "pk": 1,
+    "fields": { "name": "Folder 1", "topics": [2] }
+  },
+  {
+    "model": "documents.folder",
+    "pk": 2,
+    "fields": { "name": "Folder with topic1", "topics": [1] }
+  },
+  {
+    "model": "documents.document",
+    "pk": 1,
+    "fields": {
+      "folder": 1,
+      "title": "Document 1",
+      "content": "This is some content",
+      "topics": []
+    }
+  },
+  {
+    "model": "documents.document",
+    "pk": 2,
+    "fields": {
+      "folder": 1,
+      "title": "Document 2",
+      "content": "This is some addiontal content",
+      "topics": [2]
+    }
+  }
+]
