@@ -4,6 +4,9 @@ from rest_framework import generics
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
+import logging
+
+logger = logging.getLogger(__name__)
 
 @api_view(['GET'])
 def api_root(request, format=None):
@@ -29,6 +32,7 @@ class FolderList(generics.ListCreateAPIView):
         queryset = Folder.objects.all()
         topic_id = self.request.query_params.get('topic_id')
         if topic_id is not None:
+            logger.info('Filtering folder by topic_id '+topic_id)
             queryset = queryset.filter(topics__pk=topic_id)
         return queryset
 
@@ -44,14 +48,11 @@ class DocumentList(generics.ListCreateAPIView):
         queryset = Document.objects.all()
         topic_id = self.request.query_params.get('topic_id')
         if topic_id is not None:
+            logger.info('Filtering documents by topic_id '+topic_id)
             queryset = queryset.filter(topics__pk=topic_id)
-        folder_topic_id = self.request.query_params.get('folder_topic_id')
-        if folder_topic_id is not None:
-            folder_queryset = Folder.objects.all()
-            folder_queryset = folder_queryset.filter(topics_pk=folder_topic_id)
-            queryset = queryset.filter
         folder_id = self.request.query_params.get('folder_id')
         if folder_id is not None:
+            logger.info('Filtering documents by folder_id '+folder_id)
             queryset = queryset.filter(folder__pk=folder_id)
         
         return queryset
